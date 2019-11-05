@@ -1,0 +1,24 @@
+{
+  "name": "week8-movies-AM",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:watch": "nodemon -q src/server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie": "^0.4.0",
+    "cookie-parser": "^1.4.4",
+    "env2": "^2.2.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^7.12.1",
+    "pg-promise": "^9.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
