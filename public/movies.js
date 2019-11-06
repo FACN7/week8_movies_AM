@@ -1,3 +1,12 @@
+(function() {
+  document.getElementById("movie-card-list").hidden = "hidden";
+
+  setTimeout(function() {
+    document.getElementById("movie-card-list").hidden = "";
+    document.getElementById("loader").hidden = "hidden";
+  }, 2000);
+})();
+
 var stars;
 
 document.body.addEventListener("click", function(e) {
