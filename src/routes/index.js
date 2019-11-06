@@ -11,4 +11,13 @@ router.get("/", (req, res) => {
     .catch(err => console.log(err));
 });
 
+router.post("/ratefilm", (req, res) => {
+  let stars = req.body.stars;
+  let film_id = req.body.film_id;
+
+  queries
+    .updateRates(film_id, stars)
+    .then(x => res.send())
+    .catch(err => console.log(err));
+});
 module.exports = router;
