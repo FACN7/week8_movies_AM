@@ -1,30 +1,28 @@
-const express = require('express');
-const exphbs = require('express-handlebars');
-const path = require('path');
-const routes = require('./routes/index');
-const helpers = require('./views/helpers/index');
+const express = require("express");
+const exphbs = require("express-handlebars");
+const path = require("path");
+const routes = require("./routes/index");
+const helpers = require("./views/helpers/index");
 
 const app = express();
 
+app.use("/public", express.static("public"));
 
-
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "hbs");
 
 app.engine(
-  'hbs',
+  "hbs",
   exphbs({
-    extname: 'hbs',
-    layoutsDir: path.join(__dirname, 'views', 'layouts'),
-    partialsDir: path.join(__dirname, 'views', 'partials'),
-    defaultLayout: 'main',
-    helpers,
+    extname: "hbs",
+    layoutsDir: path.join(__dirname, "views", "layouts"),
+    partialsDir: path.join(__dirname, "views", "partials"),
+    defaultLayout: "main",
+    helpers
   })
 );
 
-
-
-app.set('port', process.env.PORT || 3333);
+app.set("port", process.env.PORT || 1818);
 app.use(routes);
 
 module.exports = app;
