@@ -1,6 +1,4 @@
-<h1>List of all movies:</h1>
 
-<li></li>
 
 
 
@@ -18,7 +16,8 @@
                 <h4 class="movie-card__info">({{this.outyear}}) {{this.genre}}</h4>
             </div>
             <p class="movie-card__desc">{{this.descrip}}.</p>
-            <button class="btn btn-outline movie-card__button" type="button">Rate </button>
+            <button class="btn btn-outline movie-card__button" type="button">Rate It</button>
+            <p class="movie-card__rate">Rating: {{this.rate}}</p>
         </div>
     </div>
     {{/each}}
