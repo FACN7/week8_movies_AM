@@ -1,6 +1,6 @@
-
-
-
+{{!-- {{#each movies_rate}}
+<h1>{{movies_rate}}</h1>
+{{/each}} --}}
 
 <div id="movie-card-list">
     {{#each movies}}
@@ -9,19 +9,36 @@
         <div class="movie-card__overlay"></div>
         <div class="movie-card__share">
 
+
         </div>
         <div class="movie-card__content">
             <div class="movie-card__header">
                 <h1 class="movie-card__title">{{this.name}}</h1>
                 <h4 class="movie-card__info">({{this.outyear}}) {{this.genre}}</h4>
             </div>
+
             <p class="movie-card__desc">{{this.descrip}}.</p>
 
-            <button class="btn btn-outline movie-card__button" type="button">Rate It</button>
             <p class="movie-card__rate">Rating: {{this.rate}}</p>
 
+            <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+            </div>
 
-  
+            <button class="btn btn-outline movie-card__button" type="button">Rate It</button>
+
+
+
+
 
         </div>
     </div>

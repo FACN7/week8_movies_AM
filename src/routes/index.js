@@ -7,7 +7,7 @@ const router = express.Router();
 router.get("/", (req, res) => {
   queries
     .getAllMovies()
-    .then(movies => res.render("movies", { movies, layout: "main" }))
+    .then(movies => res.render("movies", { movies }))
     .catch(err => console.log(err));
 });
 
