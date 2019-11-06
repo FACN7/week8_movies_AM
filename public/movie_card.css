@@ -182,6 +182,13 @@ button:focus {
   margin-bottom: 2em;
 }
 
+.movie-card__rate {
+  font-weight: 500;
+  opacity: 0.84;
+  margin-bottom: 2em;
+  font-size: 1.5em;
+}
+
 h1,
 h2,
 h3 {
