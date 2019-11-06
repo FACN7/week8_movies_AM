@@ -24,10 +24,8 @@ BEGIN;
      CREATE TABLE
     IF NOT EXISTS movierates(
         movie_id INTEGER,
-        user_id INTEGER,
         rate INTEGER NOT NULL,
-        FOREIGN KEY (movie_id) REFERENCES movies (id),
-        FOREIGN KEY (user_id) REFERENCES users (id)
+        FOREIGN KEY (movie_id) REFERENCES movies (id)
     );
 
 INSERT INTO users
@@ -41,9 +39,9 @@ INSERT INTO users
 insert into movies (name ,pic, descrip,rate,genre,outyear)values 
 ('Tropa de Elite 2','/1odL7ZU4rP8wOqPj2NLDOTyMJCh.jpg','After a bloody invasion of the BOPE in the High-Security Penitentiary Bangu',4,'Animation, Action, Drama',2022),   
 
-('Ben-Hur','/uOQPSUGG3ZHiDg9ecN8irQNZ4T1.jpg','Judah Ben-Hur, a Palestinian Jew, is battling the Roman empire at the time of Chr',6,'Adventure, Comedy, Sci-Fi',2015),
+('Ben-Hur','/uOQPSUGG3ZHiDg9ecN8irQNZ4T1.jpg','Judah Ben-Hur, a Palestinian Jew, is battling the Roman empire at the time of Chr',3,'Adventure, Comedy, Sci-Fi',2015),
 
-('he Perks of Being a Wallflower','/uhLcaTPeBpUNgYhZXhDWkj7gMkp.jpg','15-year-old freshman Charlie is a wallflower, always watching life from the sidel',9,'Animation, Action, Drama',1999),
+('he Perks of Being a Wallflower','/uhLcaTPeBpUNgYhZXhDWkj7gMkp.jpg','15-year-old freshman Charlie is a wallflower, always watching life from the sidel',4,'Animation, Action, Drama',1999),
 
 ('Stagecoach','/tkKUnTgSWg3xkN6ouDUM1JH2zGK.jpg','A group of people traveling on a stagecoach find their journey complicated by the',4,'Adult',2027),
 
@@ -53,7 +51,19 @@ insert into movies (name ,pic, descrip,rate,genre,outyear)values
 
 ('Ernest et Célestine','/yUB3G9hTINHYlSpWSFvoSvyPtDx.jpg','Celestine is a little mouse trying to avoid a dental career; Ernest is a big bear',2,'Adventure, Comedy, Sci-Fi',2020),
 
-('The Blues Brothers','/q3eNcig4YFEsUTnmIYDA90FdndO.jpg','Jake Blues is just out of jail, and teams up with his brother, Elwood on a miss',10,'Animation, Action, Drama',2005),
+('The Blues Brothers','/q3eNcig4YFEsUTnmIYDA90FdndO.jpg','Jake Blues is just out of jail, and teams up with his brother, Elwood on a miss',5,'Animation, Action, Drama',2005),
 
 ('Le scaphandre et le papillon','/AsCyxEogqOHKEb79G5lwjfx8uSa.jpg','The true story of Elle France editor Jean-Dominique Bauby, who, in 1995 at the age',4,'Adventure, Comedy, Sci-Fi',1995);    
+
+
+INSERT INTO movierates(movie_id,rate)VALUES
+(1,4),
+(2,3),
+(3,4),
+(4,4),
+(5,2),
+(6,4),
+(7,2),
+(8,5),
+(9,4);
 COMMIT;
