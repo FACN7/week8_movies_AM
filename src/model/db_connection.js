@@ -2,7 +2,7 @@ const pgpFunc = require("pg-promise");
 const pgp = pgpFunc();
 const url = require("url");
 const env = require("env2");
-env("../../config.env");
+env("config.env");
 
 let DB_URL = process.env.DB_URL;
 
