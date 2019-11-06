@@ -36,7 +36,7 @@ and then calculates the average rate.
 - [x] ES6
 - [x] CSS
 
-Stretch goals:
+## Stretch goals:
 
 - [ ] add admin user and enable adding and deleting movies
 - [ ] add login, auth and jwt
