@@ -1,5 +1,6 @@
-body {font-family: Arial, Helvetica, sans-serif;
-margin: 0;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
 .navbar {
@@ -20,13 +21,14 @@ margin: 0;
   background-color: #000;
 }
 
-
 .navbar .icon {
   display: none;
 }
 
 @media screen and (max-width: 600px) {
-  .navbar a:not(:first-child) {display: none;}
+  .navbar a:not(:first-child) {
+    display: none;
+  }
   .navbar a.icon {
     float: right;
     display: block;
@@ -34,7 +36,9 @@ margin: 0;
 }
 
 @media screen and (max-width: 600px) {
-  .navbar.responsive {position: relative;}
+  .navbar.responsive {
+    position: relative;
+  }
   .navbar.responsive .icon {
     position: absolute;
     right: 0;
